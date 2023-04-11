@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.trannhattan_lab2.MainActivity">
+
+    <EditText
+        android:id="@+id/edittext_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fulname"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/edittext_salary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gross Salary"
+        android:inputType="number"
+        android:layout_below="@id/edittext_username"/>
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext_salary"
+        android:layout_centerHorizontal="true"
+        android:text="Calculate"/>
+
+    <ScrollView
+        android:id="@+id/scrollview_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_calculate"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/linearlayout_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+</RelativeLayout>
