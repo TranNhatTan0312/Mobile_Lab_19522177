@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">tnt_lab3</string>
-    <string name="query_local">QUERY LOCAL</string>
-    <string name="add_local">ADD LOCAL</string>
-    <string name="phone_number">Phone number</string>
-    <string name="full_name">Full name</string>
-</resources>
