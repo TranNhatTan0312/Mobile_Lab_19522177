@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "104245747877",
+    "project_id": "tran-nhat-tan-lab4",
+    "storage_bucket": "tran-nhat-tan-lab4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104245747877:android:d30bb9f36ef89d914fad4c",
+        "android_client_info": {
+          "package_name": "com.example.trannhattan_lab4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104245747877-1pnsuokl7ek7br6j378hb4ni0lhndlf5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJJieaZ0F90Bx-opLL4frQK_r97vUMXGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104245747877-1pnsuokl7ek7br6j378hb4ni0lhndlf5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

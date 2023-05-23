@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/Mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:text="HOME"
+            android:textSize="30dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal">
+        </TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Wellcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Mobile Labs"
+        android:layout_above="@+id/ViewFullName"
+        android:textSize="30dp"
+
+        android:gravity="center_horizontal">
+    </TextView>
+
+
+
+    <TextView
+        android:id="@+id/ViewFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:text="name"
+        android:layout_above="@+id/btn_Logout"
+        android:layout_marginBottom="17dp"
+        android:gravity="center">
+    </TextView>
+    <Button
+        android:id="@+id/btn_Logout"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/blue"
+        android:text="Log out"
+        android:textSize="18dp"
+        android:textAllCaps="false"
+        android:layout_above="@+id/textview"
+        android:layout_centerHorizontal="true"
+
+        />
+    <View
+        android:id="@+id/textview"
+        android:layout_width="340dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textAllCaps="true"
+        android:layout_marginBottom="250dp"
+        android:layout_alignParentBottom="true"/>
+
+
+
+
+</RelativeLayout>
+
+
+

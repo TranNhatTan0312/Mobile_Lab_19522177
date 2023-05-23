@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/Mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Mobile Labs"
+            android:textSize="30dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center_horizontal">
+        </TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:text="Full name: "
+        android:layout_above="@+id/EditFullname"
+        android:layout_marginBottom="0dp"
+        android:gravity="left"
+        android:paddingLeft="40dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/EditFullname"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@+id/Phone"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Please enter Fullname"
+        android:textSize="17dp">
+    </EditText>
+
+    <TextView
+        android:id="@+id/Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:text="Phone: "
+        android:layout_above="@+id/EditPhone"
+        android:layout_marginBottom="0dp"
+        android:gravity="left"
+        android:paddingLeft="40dp">
+    </TextView>
+    <EditText
+        android:id="@+id/EditPhone"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@+id/btn_Login"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:hint="EPlease enter Fullname"
+        android:textSize="17dp">
+    </EditText>
+
+
+
+
+    <Button
+        android:id="@+id/btn_Login"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="Sign Up"
+        android:textSize="18dp"
+        android:textAllCaps="false"
+        android:layout_above="@+id/Register"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+    <TextView
+        android:id="@+id/Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="17dp"
+        android:text="Don't have an account? Sign Up"
+        android:layout_marginBottom="200dp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
+
+
+
