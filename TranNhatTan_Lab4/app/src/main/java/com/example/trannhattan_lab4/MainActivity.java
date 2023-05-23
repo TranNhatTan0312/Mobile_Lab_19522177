@@ -79,13 +79,13 @@ public class MainActivity extends AppCompatActivity {
 
         // creating a collection reference
         // for our Firebase Firestore database.
-        CollectionReference dbCourses = db.collection("Users");
+        CollectionReference dbUsers = db.collection("users");
 
         // adding our data to our courses object class.
-        Users courses = new Users(courseName, courseDescription, Phone, courseDuration);
+        Users user1 = new Users(courseName, courseDescription, Phone, courseDuration);
 
         // below method is use to add data to Firebase Firestore.
-        dbCourses.add(courses).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        dbUsers.add(user1).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 // after the data addition is successful
