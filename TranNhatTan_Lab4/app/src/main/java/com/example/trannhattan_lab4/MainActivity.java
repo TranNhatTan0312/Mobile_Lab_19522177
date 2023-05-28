@@ -4,11 +4,13 @@ package com.example.trannhattan_lab4;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +20,10 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import android.os.Bundle;
+
+import java.security.MessageDigest;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +40,33 @@ public class MainActivity extends AppCompatActivity {
     // creating a variable
     // for firebasefirestore.
     private FirebaseFirestore db;
+
+    private String encryptPassword(String password) {
+        try {
+            // Tạo một đối tượng MessageDigest với thuật toán MD5
+            MessageDigest md = MessageDigest.getInstance("MD5");
+
+            // Chuyển đổi chuỗi mật khẩu thành mảng byte
+            byte[] passwordBytes = password.getBytes();
+
+            // Mã hóa mảng byte của mật khẩu
+            byte[] encryptedBytes = md.digest(passwordBytes);
+
+            // Chuyển đổi mảng byte thành chuỗi hex
+            StringBuilder sb = new StringBuilder();
+            for (byte b : encryptedBytes) {
+                sb.append(String.format("%02x", b));
+            }
+
+            // Trả về chuỗi mã hóa
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+
+        // Nếu xảy ra lỗi, trả về null hoặc giá trị mặc định
+        return null;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,20 +117,28 @@ public class MainActivity extends AppCompatActivity {
         // adding our data to our courses object class.
         Users user1 = new Users(courseName, courseDescription, Phone, courseDuration);
 
+        Map<String, Object> user = new HashMap<>();
+        user.put("name", user1.getFullName());
+        user.put("phone", user1.getPhone());
+        user.put("username", user1.getUserName());
+        user.put("password", user1.getPassword());
+        String encryptedPassword = encryptPassword(String.valueOf(password));
+
         // below method is use to add data to Firebase Firestore.
-        dbUsers.add(user1).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        dbUsers.add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 // after the data addition is successful
                 // we are displaying a success toast message.
-                Toast.makeText(MainActivity.this, "Your Course has been added to Firebase Firestore", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Dang ky thanh cong", Toast.LENGTH_LONG).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 // this method is called when the data addition process is failed.
                 // displaying a toast message when data addition is failed.
-                Toast.makeText(MainActivity.this, "Fail to add course \n" + e, Toast.LENGTH_SHORT).show();
+                Log.d("abc",e.getStackTrace().toString());
+                Toast.makeText(MainActivity.this, "Fail to add course \n" + e.getStackTrace().toString(), Toast.LENGTH_LONG).show();
             }
         });
     }

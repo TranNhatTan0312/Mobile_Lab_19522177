@@ -105,6 +105,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="30dp"
+        android:inputType="textPassword"
         android:hint="Please enter password"
         android:textSize="17dp">
     </EditText>

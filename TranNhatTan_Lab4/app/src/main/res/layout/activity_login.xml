@@ -5,16 +5,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/Mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:text="Mobile Labs"
-            android:textSize="30dp"
             android:layout_marginTop="100dp"
-            android:gravity="center_horizontal">
-        </TextView>
+            android:gravity="center_horizontal"
+            android:text="Mobile Labs"
+            android:textSize="30dp"></TextView>
 
     </LinearLayout>
 
@@ -53,6 +53,7 @@
         android:gravity="left"
         android:paddingLeft="40dp">
     </TextView>
+
     <EditText
         android:id="@+id/EditPhone"
         android:layout_width="match_parent"
@@ -64,8 +65,6 @@
         android:hint="EPlease enter Fullname"
         android:textSize="17dp">
     </EditText>
-
-
 
 
     <Button
