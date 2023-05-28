@@ -14,8 +14,9 @@
             android:layout_marginTop="100dp"
             android:gravity="center_horizontal"
             android:text="Mobile Labs"
-            android:textSize="30dp"></TextView>
+            android:textSize="30dp">
 
+        </TextView>
     </LinearLayout>
 
     <TextView
@@ -23,15 +24,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="17dp"
-        android:text="Full name: "
-        android:layout_above="@+id/EditFullname"
+        android:text="User name: "
+        android:layout_above="@+id/LoginEditUsername"
         android:layout_marginBottom="0dp"
         android:gravity="left"
         android:paddingLeft="40dp">
     </TextView>
 
     <EditText
-        android:id="@+id/EditFullname"
+        android:id="@+id/LoginEditUsername"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_above="@+id/Phone"
@@ -47,15 +48,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="17dp"
-        android:text="Phone: "
-        android:layout_above="@+id/EditPhone"
+        android:text="Password: "
+        android:layout_above="@+id/LoginEditPassword"
         android:layout_marginBottom="0dp"
         android:gravity="left"
         android:paddingLeft="40dp">
     </TextView>
 
     <EditText
-        android:id="@+id/EditPhone"
+        android:id="@+id/LoginEditPassword"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_above="@+id/btn_Login"

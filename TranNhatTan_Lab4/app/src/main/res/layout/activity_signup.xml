@@ -120,14 +120,14 @@
         android:text="Sign Up"
         android:textSize="18dp"
         android:textAllCaps="false"
-        android:layout_above="@+id/Register"
+        android:layout_above="@+id/BacktoLogin"
         android:layout_centerHorizontal="true"
 
         />
 
 
     <TextView
-        android:id="@+id/Register"
+        android:id="@+id/BacktoLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
