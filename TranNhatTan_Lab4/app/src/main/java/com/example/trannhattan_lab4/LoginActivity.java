@@ -95,12 +95,18 @@ public class LoginActivity extends AppCompatActivity {
                         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                             @Override
                             public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                                SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putString("username", userName);
-                                editor.apply();
-                                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                                startActivity(intent);
-                                Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_LONG).show();
+                                if(!task.getResult().isEmpty()){
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    editor.putString("username", userName);
+                                    editor.apply();
+                                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                                    startActivity(intent);
+                                    Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_LONG).show();
+                                }
+                               else{
+                                    Toast.makeText(getApplicationContext(),"Đăng nhập thất bại",Toast.LENGTH_LONG).show();
+
+                                }
 
                             }
                         })

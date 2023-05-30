@@ -93,8 +93,9 @@
         android:layout_height="50dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/blue"
-        android:text="Sign Up"
+        android:text="Login"
         android:textSize="18dp"
+
         android:textAllCaps="false"
         android:layout_above="@+id/Register"
         android:layout_centerHorizontal="true"
