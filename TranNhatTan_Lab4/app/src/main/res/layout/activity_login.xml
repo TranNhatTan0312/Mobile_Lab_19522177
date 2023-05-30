@@ -3,24 +3,43 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:layout_above="@+id/daugachduoi"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:gravity="center">
         <TextView
-            android:id="@+id/Mobile"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Mobile "
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lab "
+            android:textSize="35dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
 
-            android:layout_marginTop="100dp"
-            android:gravity="center_horizontal"
-            android:text="Mobile Labs"
-            android:textSize="30dp">
+    <LinearLayout
+        android:id="@+id/daugachduoi"
+        android:layout_width="60dp"
+        android:layout_height="6dp"
+        android:layout_above="@+id/Inputusername"
+        android:layout_marginBottom="104dp"
+        android:background="@color/blue"
+        android:layout_marginLeft="170dp"
+        android:orientation="horizontal">
 
-        </TextView>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/fullname"
+        android:id="@+id/Inputusername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="17dp"
@@ -73,6 +92,7 @@
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/blue"
         android:text="Sign Up"
         android:textSize="18dp"
         android:textAllCaps="false"

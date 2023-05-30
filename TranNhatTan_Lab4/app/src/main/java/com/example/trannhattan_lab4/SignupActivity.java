@@ -136,8 +136,8 @@ public class SignupActivity extends AppCompatActivity {
         user.put("name", user1.getFullName());
         user.put("phone", user1.getPhone());
         user.put("username", user1.getUserName());
-        user.put("password", user1.getPassword());
-        String encryptedPassword = encryptPassword(String.valueOf(password));
+       // user.put("password", user1.getPassword());
+        user.put("password", Encrypt.HashPasswordMd5(Password));
 
         // below method is use to add data to Firebase Firestore.
         dbUsers.add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
