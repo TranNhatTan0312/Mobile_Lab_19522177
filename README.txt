@@ -1,1 +1,1 @@
-Lab 1 o trong branch Lab1 ạ
+Lab 5 mobile em nộp vào deadline .2 ạ
