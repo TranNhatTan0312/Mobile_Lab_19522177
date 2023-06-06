@@ -19,7 +19,6 @@ public class Main1Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
-
                 overridePendingTransition(R.anim.anim_move_in_left, R.anim.anim_move_out_right);
             }
         });
