@@ -1,10 +1,11 @@
 package com.example.trannhattan_lab5;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class Main1Activity extends AppCompatActivity {
 

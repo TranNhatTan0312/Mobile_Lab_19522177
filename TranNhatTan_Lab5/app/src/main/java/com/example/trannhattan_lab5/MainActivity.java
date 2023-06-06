@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewsByIds();
-        initVariables();
 
         findViewsByIds();
         initVariables();
@@ -52,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
         handleClickAnimationCode(btnFadeOutCode, initFadeOutAnimation());
         handleClickAnimationCode(btnBlinkCode, initBlinkAnimation());
 
+
         ivUitLogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent iNewActivity = new Intent(MainActivity.this, Main1Activity.class);
                 startActivity(iNewActivity);
-
                 overridePendingTransition(R.anim.anim_move_in_right, R.anim.anim_move_out_left);
             }
         });
